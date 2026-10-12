@@ -78,7 +78,7 @@ class McDonaldMCP:
 
     def initialize(self):
         info = self.rpc('initialize', {'protocolVersion': PROTOCOL,
-                        'capabilities': {}, 'clientInfo': {'name':'mcfortune-nerissa','version':'0.2.0'}})
+                        'capabilities': {}, 'clientInfo': {'name':'mcmealshake-nerissa','version':'0.2.0'}})
         self.rpc('notifications/initialized', notification=True)
         return info
 
