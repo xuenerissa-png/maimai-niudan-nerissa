@@ -1,0 +1,8 @@
+.env
+.env.*
+config.json
+private*
+__pycache__/
+*.pyc
+
+.private/

@@ -1,0 +1,1 @@
+"""McFortune skill package."""
