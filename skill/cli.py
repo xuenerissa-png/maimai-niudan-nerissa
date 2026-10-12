@@ -4,7 +4,7 @@ import json
 from .mcp_client import McDonaldMCP, MCPError, safe_schema, READ_ONLY
 
 def main():
-    parser = argparse.ArgumentParser(description='麦门天意：麦当劳 MCP 查询与确认下单')
+    parser = argparse.ArgumentParser(description='麦麦扭蛋：麦当劳 MCP 查询与确认下单')
     parser.add_argument('command', choices=['test','tools','schema','call','order','nutrition'])
     parser.add_argument('name', nargs='?')
     parser.add_argument('--args-file', help='工具参数 JSON 文件路径（不包含 Token）')

@@ -55,7 +55,7 @@ def mac_dialog(script):
 
 def read_token(gui=False):
     if gui and sys.platform == 'darwin':
-        choice = mac_dialog('''button returned of (display dialog "欢迎使用麦搭摇！\\n\\n① 打开麦当劳官方控制台，登录后进入「控制台」。\\n② 首次使用按页面提示激活 MCP，复制个人 Token。\\n③ 回到这里，点击「我已复制」。\\n\\nToken 只在本机填写，不要发到聊天里。" with title "连接麦当劳 · 第1步" buttons {"取消", "打开控制台", "我已复制"} default button "打开控制台" cancel button "取消")''')
+        choice = mac_dialog('''button returned of (display dialog "欢迎使用麦麦扭蛋！\\n\\n① 打开麦当劳官方控制台，登录后进入「控制台」。\\n② 首次使用按页面提示激活 MCP，复制个人 Token。\\n③ 回到这里，点击「我已复制」。\\n\\nToken 只在本机填写，不要发到聊天里。" with title "连接麦当劳 · 第1步" buttons {"取消", "打开控制台", "我已复制"} default button "打开控制台" cancel button "取消")''')
         if choice == '打开控制台':
             webbrowser.open(CONSOLE_URL)
             mac_dialog('''display dialog "请在浏览器完成登录、激活并复制 Token。\\n\\n复制好了，再点「继续填写」。" with title "连接麦当劳 · 第2步" buttons {"取消", "继续填写"} default button "继续填写" cancel button "取消"''')
@@ -70,7 +70,7 @@ def read_token(gui=False):
 
 
 def configure(root, *, gui=False, token_reader=None, client_factory=McDonaldMCP, output=print):
-    output('欢迎使用麦搭摇！只需连接一次麦当劳，之后就能摇餐。')
+    output('欢迎使用麦麦扭蛋！只需连接一次麦当劳，之后就能摇餐。')
     try:
         token = (token_reader or (lambda: read_token(gui)))().strip()
         if not token:
@@ -99,7 +99,7 @@ def configure(root, *, gui=False, token_reader=None, client_factory=McDonaldMCP,
     output('助手会先查询真实菜单，再核验价格和热量；下单前会确认。')
     if gui and sys.platform == 'darwin':
         try:
-            mac_dialog('''display dialog "连接成功！\\n\\n回到已安装麦搭摇 Skill 的 AI 助手，试着说：\\n「摇个麦门，1人，预算30元，500千卡以内。」\\n\\n再告诉助手城市和附近地标，就能查询真实菜单。\\nToken 已保存在本机，下次无需重复填写。" with title "麦搭摇 · 已连接" buttons {"开始摇餐"} default button "开始摇餐"''')
+            mac_dialog('''display dialog "连接成功！\\n\\n回到已安装麦麦扭蛋 Skill 的 AI 助手，试着说：\\n「摇个麦门，1人，预算30元，500千卡以内。」\\n\\n再告诉助手城市和附近地标，就能查询真实菜单。\\nToken 已保存在本机，下次无需重复填写。" with title "麦麦扭蛋 · 已连接" buttons {"开始摇餐"} default button "开始摇餐"''')
         except (KeyboardInterrupt, OSError):
             pass
     return True

@@ -1,1 +1,1 @@
-"""McFortune skill package."""
+"""Maimai Niudan skill package by nerissa."""
