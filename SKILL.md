@@ -1,9 +1,9 @@
 ---
-name: mcfortune
+name: mcfortune-nerissa
 description: 趣味点餐扭蛋 Skill：结合场景、偏好、真实麦当劳菜单和轻松的餐桌寄语。
 ---
 
-# 麦门天意 McFortune
+# 麦门天意 McFortune-nerissa
 
 ## 使用入口
 用户说「摇个麦门」「今天吃什么」「给我一句餐桌寄语」即可进入。
